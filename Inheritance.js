@@ -32,6 +32,13 @@ class HospitalEmployee {
       super(name);
       this._certifications = certifications;
     }
+
+    get certifications(){
+      return this._certifications;
+    }
+  addCertification(newCertification) {
+  this._certifications.push(newCertification);
+   }
   }
   /*Under the Nurse class, create a new instance of Nurse and save it to a constant variable named nurseOlynyk. Pass in the following values for each property:
   
@@ -39,4 +46,17 @@ class HospitalEmployee {
   certifications: ['Trauma', 'Pediatrics']*/
     const nurseOlynyk = new Nurse('Olynyk',['Trauma', 'Pediatrics']);
   
-  
+    const nurseOlynyk = new Nurse('Olynyk', ['Trauma','Pediatrics']);
+    nurseOlynyk.takeVacationDays(5);
+    console.log(nurseOlynyk.remainingVacationDays);
+    
+    console.log(nurseOlynyk.addCertification('Genetics'));
+    
+    console.log(nurseOlynyk.certifications);
+
+    /* 1.Added method "addCertifications under the certifications getter"
+    The method should accept one input (newCertification). Inside the method, use the push method to add the newCertification value to the nurse’s certifications array.
+       2.Add a method called addCertification under the certifications getter.
+    The method should accept one input (newCertification).
+       3.At the bottom of main.js call the .addCertification() method on nurseOlynyk with a parameter of 'Genetics'.
+      4.At the bottom of main.js call the .addCertification() method on nurseOlynyk with a parameter of 'Genetics'.*/
