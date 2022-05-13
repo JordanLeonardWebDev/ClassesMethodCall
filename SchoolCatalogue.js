@@ -6,6 +6,8 @@ class School {
         this._numberOfStudents = _numberOfStudents;
     }
 
+    //Properties: name (string), level (one of three strings: 'primary', 'middle', or 'high'), and numberOfStudents (number)
+
   get name() {
     return this._name;
   }
@@ -16,6 +18,7 @@ class School {
     return this.__numberOfStudents;
   }
 
+  //Getters: all properties have getters
 
   set _numberOfStudents(value) {
     if(value.isNaN()) {
@@ -26,6 +29,8 @@ class School {
     }
   } 
 
+  //Setters: the numberOfStudents property has a setter
+
   toggleCheckedOutStatus () {
     this._isCheckedOut = !this._isCheckedOut;
     }
@@ -34,3 +39,10 @@ class School {
         console.log('${name} educates ${numberOfStudents} at the ${level} school level');
     }
 }
+
+
+// Under getters, created a method named quickFacts that logs the string
+
+
+
+//Under .quickFacts(), created a static method named pickSubstituteTeacher. This method will receive one parameter, named substituteTeachers. The substituteTeachers parameter will take an array of strings.
